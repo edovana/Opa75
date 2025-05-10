@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .page {
+      min-width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-container">
+    <div class="page" style="background-color: lightblue;">
+      <h1>Gelukkige verjaardag opa!</h1>
+      <h1>75</h1>
+      </div>
+      <div class="page" style="background-color: gray;">
+        <h1>Edo, Bram, Hesse, Mieke</h1>
+    </div>
+  </div>
+
+</body>
+</html>
