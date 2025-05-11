@@ -7,9 +7,6 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       box-sizing: border-box;
       font-family: Arial, sans-serif;
       overflow-x: hidden;
@@ -23,20 +20,26 @@
       height: 100vh;
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translate(10px); }
-    }  
-    
-    .scroll-hint {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-family: sans-serif;
-      animation: bounce 1.5s infinite;
-    }
+@keyframes bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translate(10px); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.scroll-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: sans-serif;
+  animation: bounce 1.5s infinite, fadeOut 6s forwards;
+}
     
     .page {
       min-width: 100vw;
