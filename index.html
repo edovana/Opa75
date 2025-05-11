@@ -38,7 +38,12 @@
   transform: translateX(-50%);
   color: white;
   font-family: sans-serif;
-  animation: bounce 1.5s infinite, fadeOut 6s forwards;
+  animation: bounce 1.5s infinite;
+  transition: opacity 1s ease;
+}
+
+.scroll-hint.fade-out {
+  animation: fadeOut 2s forwards;
 }
     
     .page {
