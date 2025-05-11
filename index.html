@@ -23,6 +23,21 @@
       height: 100vh;
     }
 
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translate(10px); }
+    }  
+    
+    .scroll-hint {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: sans-serif;
+      animation: bounce 1.5s infinite;
+    }
+    
     .page {
       min-width: 100vw;
       height: 100vh;
@@ -46,6 +61,8 @@
     <div class="page" style="background-color: #3e578f;">
       <img src="opa75.png" alt="Foto van opa">
       </div>
+    <div class="scroll-hint">→ scroll to the right →
+    </div>
       <div class="page" style="background-color: #d25223;">
          <img src="wishes.png" alt="birthday wishes">
     </div>
