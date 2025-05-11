@@ -20,29 +20,20 @@
       height: 100vh;
     }
 
-@keyframes bounce {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translate(10px); }
+.scroll-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.7);
+  animation: subtleMove 1.2s infinite;
+  pointer-events: none;
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-.scroll-hint {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-family: sans-serif;
-  animation: bounce 1.5s infinite;
-  transition: opacity 1s ease;
-  white-space: nowrap;
-  width: max-content;
-  text-align: center;
+@keyframes subtleMove {
+  0%, 100% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(8px); }
 }
 
 .scroll-hint.fade-out {
@@ -72,7 +63,7 @@
     <div class="page" style="background-color: #3e578f;">
       <img src="opa75.png" alt="Foto van opa">
       </div>
-    <div class="scroll-hint">→ scroll to the right →
+    <div class="scroll-arrow">→
     </div>
       <div class="page" style="background-color: #d25223;">
          <img src="wishes.png" alt="birthday wishes">
